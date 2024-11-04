@@ -54,7 +54,12 @@ public class StudentManageController {
     }
 
     @FXML
-    void btnDiscardOnAction(ActionEvent event) {
+    void btnPaymentOnAction(ActionEvent event) {
+
+    }
+
+    @FXML
+    void btnSCourseOnAction(ActionEvent event) {
 
     }
 
@@ -67,5 +72,4 @@ public class StudentManageController {
     void btnUpdateOnAction(ActionEvent event) {
 
     }
-
 }

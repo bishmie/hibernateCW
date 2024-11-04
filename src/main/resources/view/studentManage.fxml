@@ -64,65 +64,70 @@
       <TextField fx:id="txtContact" layoutX="732.0" layoutY="268.0" prefHeight="43.0" prefWidth="337.0" />
       <TableView fx:id="tblStudent" layoutX="39.0" layoutY="403.0" prefHeight="291.0" prefWidth="1030.0">
         <columns>
-          <TableColumn fx:id="colStudentId" prefWidth="147.0" text="Student Id" />
-          <TableColumn fx:id="colRegesterDate" prefWidth="159.00001525878906" text="Register Date" />
-            <TableColumn fx:id="colFirstName" prefWidth="161.0" text="First Name" />
-            <TableColumn fx:id="colSecondName" prefWidth="186.0" text="Second Name" />
-            <TableColumn fx:id="colAddress" prefWidth="171.0" text="Address" />
-            <TableColumn fx:id="colContact" prefWidth="205.0" text="Contact" />
+          <TableColumn fx:id="colStudentId" prefWidth="90.0" text="Student Id" />
+          <TableColumn fx:id="colRegesterDate" prefWidth="143.00001525878906" text="Register Date" />
+            <TableColumn fx:id="colFirstName" prefWidth="117.0" text="First Name" />
+            <TableColumn fx:id="colSecondName" prefWidth="133.0" text="Second Name" />
+            <TableColumn fx:id="colAddress" prefWidth="131.0" text="Address" />
+            <TableColumn fx:id="colContact" prefWidth="143.00006103515625" text="Contact" />
+            <TableColumn prefWidth="140.0" text="Course" />
+            <TableColumn prefWidth="130.0" text="Payment" />
         </columns>
       </TableView>
-      <JFXButton buttonType="RAISED" layoutX="633.0" layoutY="339.0" onAction="#btnSaveOnAction" prefHeight="35.0" prefWidth="103.0" style="-fx-background-color: GREEN;" text="SAVE" textFill="#f8f8f5">
+      <JFXButton buttonType="RAISED" layoutX="791.0" layoutY="340.0" onAction="#btnSaveOnAction" prefHeight="35.0" prefWidth="84.0" style="-fx-background-color: GREEN;" text="  SAVE" textFill="#f8f8f5">
          <font>
-            <Font name="Arial Bold" size="11.0" />
+            <Font name="Arial Bold" size="10.0" />
          </font>
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor>
       </JFXButton>
-      <JFXButton buttonType="RAISED" layoutX="743.0" layoutY="339.0" onAction="#btnUpdateOnAction" prefHeight="35.0" prefWidth="103.0" style="-fx-background-color: BROWN;" text="UPDATE" textFill="#fffefa">
+      <JFXButton buttonType="RAISED" layoutX="885.0" layoutY="340.0" onAction="#btnUpdateOnAction" prefHeight="35.0" prefWidth="84.0" style="-fx-background-color: BROWN;" text="     UPDATE" textFill="#fffefa">
          <font>
-            <Font name="Ebrima Bold" size="11.0" />
+            <Font name="Ebrima Bold" size="10.0" />
          </font>
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor>
       </JFXButton>
-      <JFXButton buttonType="RAISED" layoutX="966.0" layoutY="339.0" onAction="#btnDiscardOnAction" prefHeight="35.0" prefWidth="103.0" style="-fx-background-color: blue;" text="   DISCARD" textFill="#f8f8f6">
+      <JFXButton buttonType="RAISED" layoutX="981.0" layoutY="340.0" onAction="#btnDeleteOnAction" prefHeight="35.0" prefWidth="84.0" style="-fx-background-color: RED;" text="    DELETE" textFill="#f8f8f6">
          <font>
-            <Font name="Arial Bold" size="11.0" />
+            <Font name="Arial Bold" size="10.0" />
          </font>
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor>
       </JFXButton>
-      <JFXButton buttonType="RAISED" layoutX="854.0" layoutY="339.0" onAction="#btnDeleteOnAction" prefHeight="35.0" prefWidth="103.0" style="-fx-background-color: RED;" text="  DELETE" textFill="#f8f8f6">
-         <font>
-            <Font name="Arial Bold" size="11.0" />
-         </font>
-         <cursor>
-            <Cursor fx:constant="HAND" />
-         </cursor>
-      </JFXButton>
-      <ImageView fitHeight="16.0" fitWidth="16.0" layoutX="645.0" layoutY="346.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="16.0" fitWidth="16.0" layoutX="800.0" layoutY="347.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../../../../beekeepingIndustry_Layered/src/main/resources/icon/icons8-download-50.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="43.0" fitWidth="16.0" layoutX="752.0" layoutY="349.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="43.0" fitWidth="16.0" layoutX="893.0" layoutY="349.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../../../../beekeepingIndustry_Layered/src/main/resources/icon/icons8-update-24.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="16.0" fitWidth="16.0" layoutX="865.0" layoutY="348.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="16.0" fitWidth="16.0" layoutX="988.0" layoutY="349.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../../../../beekeepingIndustry_Layered/src/main/resources/icon/icons8-delete-30.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="16.0" fitWidth="16.0" layoutX="975.0" layoutY="349.0">
-         <image>
-            <Image url="@../../../../../../Downloads/icons8-cancel-50.png" />
-         </image>
-      </ImageView>
+      <JFXButton buttonType="RAISED" layoutX="33.0" layoutY="341.0" onAction="#btnSCourseOnAction" prefHeight="35.0" prefWidth="103.0" style="-fx-background-color: purple;" text="Select Courses" textFill="#f8f8f5">
+         <font>
+            <Font name="Arial Bold" size="11.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton buttonType="RAISED" layoutX="142.0" layoutY="341.0" onAction="#btnPaymentOnAction" prefHeight="35.0" prefWidth="103.0" style="-fx-background-color: orange;" text="Payment" textFill="#f8f8f5">
+         <font>
+            <Font name="Arial Bold" size="11.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
    </children>
 </AnchorPane>
