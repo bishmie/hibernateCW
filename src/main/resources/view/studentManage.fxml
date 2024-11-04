@@ -1,14 +1,128 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="$CONTROLLER_NAME$"
-            prefHeight="400.0" prefWidth="600.0" >
-
+<AnchorPane prefHeight="720.0" prefWidth="1102.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.StudentManageController">
+   <children>
+      <Label layoutX="38.0" layoutY="24.0" text="Student Management" textFill="#17202a">
+         <font>
+            <Font name="Arial Bold" size="23.0" />
+         </font>
+      </Label>
+      <Line endX="1001.5" endY="-16.0" layoutX="101.0" layoutY="74.0" startX="-101.0" startY="-10.0" />
+      <ImageView fitHeight="53.0" fitWidth="59.0" layoutX="1022.0" layoutY="4.0">
+         <image>
+            <Image url="@../../../../../../Downloads/icons8-user-100.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="28.0" layoutY="116.0" text="Student Id" textFill="#17202a">
+         <font>
+            <Font name="Arial Bold" size="13.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtId" layoutX="114.0" layoutY="106.0" prefHeight="43.0" prefWidth="131.0" />
+      <Label layoutX="634.0" layoutY="120.0" text="Register Date" textFill="#17202a">
+         <font>
+            <Font name="Arial Bold" size="13.0" />
+         </font>
+      </Label>
+      <DatePicker fx:id="dpDate" layoutX="732.0" layoutY="106.0" prefHeight="43.0" prefWidth="337.0" />
+      <Label layoutX="30.0" layoutY="199.0" text="First Name" textFill="#17202a">
+         <font>
+            <Font name="Arial Bold" size="13.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtFirstName" layoutX="114.0" layoutY="186.0" prefHeight="43.0" prefWidth="337.0" />
+      <Label layoutX="633.0" layoutY="199.0" text="Second Name" textFill="#17202a">
+         <font>
+            <Font name="Arial Bold" size="13.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtSecondName" layoutX="732.0" layoutY="186.0" prefHeight="43.0" prefWidth="337.0" />
+      <Label layoutX="31.0" layoutY="281.0" text="Address" textFill="#17202a">
+         <font>
+            <Font name="Arial Bold" size="13.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtAddress" layoutX="114.0" layoutY="268.0" prefHeight="43.0" prefWidth="337.0" />
+      <Label layoutX="633.0" layoutY="281.0" text="Contact" textFill="#17202a">
+         <font>
+            <Font name="Arial Bold" size="13.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtContact" layoutX="732.0" layoutY="268.0" prefHeight="43.0" prefWidth="337.0" />
+      <TableView fx:id="tblStudent" layoutX="39.0" layoutY="403.0" prefHeight="291.0" prefWidth="1030.0">
+        <columns>
+          <TableColumn fx:id="colStudentId" prefWidth="147.0" text="Student Id" />
+          <TableColumn fx:id="colRegesterDate" prefWidth="159.00001525878906" text="Register Date" />
+            <TableColumn fx:id="colFirstName" prefWidth="161.0" text="First Name" />
+            <TableColumn fx:id="colSecondName" prefWidth="186.0" text="Second Name" />
+            <TableColumn fx:id="colAddress" prefWidth="171.0" text="Address" />
+            <TableColumn fx:id="colContact" prefWidth="205.0" text="Contact" />
+        </columns>
+      </TableView>
+      <JFXButton buttonType="RAISED" layoutX="633.0" layoutY="339.0" onAction="#btnSaveOnAction" prefHeight="35.0" prefWidth="103.0" style="-fx-background-color: GREEN;" text="SAVE" textFill="#f8f8f5">
+         <font>
+            <Font name="Arial Bold" size="11.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton buttonType="RAISED" layoutX="743.0" layoutY="339.0" onAction="#btnUpdateOnAction" prefHeight="35.0" prefWidth="103.0" style="-fx-background-color: BROWN;" text="UPDATE" textFill="#fffefa">
+         <font>
+            <Font name="Ebrima Bold" size="11.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton buttonType="RAISED" layoutX="966.0" layoutY="339.0" onAction="#btnDiscardOnAction" prefHeight="35.0" prefWidth="103.0" style="-fx-background-color: blue;" text="   DISCARD" textFill="#f8f8f6">
+         <font>
+            <Font name="Arial Bold" size="11.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton buttonType="RAISED" layoutX="854.0" layoutY="339.0" onAction="#btnDeleteOnAction" prefHeight="35.0" prefWidth="103.0" style="-fx-background-color: RED;" text="  DELETE" textFill="#f8f8f6">
+         <font>
+            <Font name="Arial Bold" size="11.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <ImageView fitHeight="16.0" fitWidth="16.0" layoutX="645.0" layoutY="346.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../../beekeepingIndustry_Layered/src/main/resources/icon/icons8-download-50.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="43.0" fitWidth="16.0" layoutX="752.0" layoutY="349.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../../beekeepingIndustry_Layered/src/main/resources/icon/icons8-update-24.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="16.0" fitWidth="16.0" layoutX="865.0" layoutY="348.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../../beekeepingIndustry_Layered/src/main/resources/icon/icons8-delete-30.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="16.0" fitWidth="16.0" layoutX="975.0" layoutY="349.0">
+         <image>
+            <Image url="@../../../../../../Downloads/icons8-cancel-50.png" />
+         </image>
+      </ImageView>
+   </children>
 </AnchorPane>
