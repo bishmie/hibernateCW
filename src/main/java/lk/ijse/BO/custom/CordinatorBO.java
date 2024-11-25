@@ -1,2 +1,6 @@
-package lk.ijse.BO.custom;public interface CordinatorBO {
+package lk.ijse.BO.custom;
+
+import lk.ijse.BO.SuperBO;
+
+public interface CordinatorBO extends SuperBO {
 }

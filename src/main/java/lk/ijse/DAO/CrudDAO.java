@@ -1,2 +1,4 @@
-package lk.ijse.DAO;public interface CrudDAO {
+package lk.ijse.DAO;
+
+public interface CrudDAO {
 }

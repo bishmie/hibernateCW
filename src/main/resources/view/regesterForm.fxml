@@ -9,50 +9,62 @@
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="705.0" prefWidth="1132.0" style="-fx-background-color: #17202a;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.RegesterFormController">
+<AnchorPane fx:id="rootNode" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="705.0" prefWidth="1132.0" style="-fx-background-color: #17202a;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.RegesterFormController">
    <children>
-      <Label layoutX="879.0" layoutY="138.0" text="Register Here" textFill="#d1eaf0">
+      <Label layoutX="846.0" layoutY="101.0" text="Register Here" textFill="#d1eaf0">
          <font>
-            <Font name="Microsoft YaHei UI Bold" size="27.0" />
+            <Font name="Microsoft YaHei UI" size="22.0" />
          </font>
       </Label>
-      <Label layoutX="768.0" layoutY="215.0" text="User Name" textFill="WHITE">
+      <Label layoutX="695.0" layoutY="193.0" text="User Id" textFill="WHITE">
          <font>
-            <Font name="Arial Bold" size="16.0" />
+            <Font name="Arial" size="17.0" />
          </font>
       </Label>
-      <Label layoutX="766.0" layoutY="320.0" text="Password" textFill="WHITE">
+      <Label layoutX="962.0" layoutY="193.0" text="Password" textFill="WHITE">
          <font>
-            <Font name="Arial Bold" size="16.0" />
+            <Font name="Arial" size="17.0" />
          </font>
       </Label>
-      <TextField fx:id="txtUserId" layoutX="769.0" layoutY="255.0" prefHeight="39.0" prefWidth="385.0" style="-fx-background-color: #f8f9f9;" />
-      <TextField fx:id="txtPassword" layoutX="770.0" layoutY="353.0" prefHeight="39.0" prefWidth="385.0" style="-fx-background-color: #f8f9f9;" />
-      <JFXButton buttonType="RAISED" layoutX="904.0" layoutY="434.0" onAction="#btnRegesterOnAction" prefHeight="39.0" prefWidth="135.0" style="-fx-background-color: brown;" text="Register" textFill="WHITE">
+      <TextField fx:id="txtUserId" layoutX="693.0" layoutY="221.0" prefHeight="39.0" prefWidth="231.0" style="-fx-background-color: #f8f9f9;" />
+      <TextField fx:id="txtPassword" layoutX="962.0" layoutY="221.0" prefHeight="39.0" prefWidth="231.0" style="-fx-background-color: #f8f9f9;" />
+      <JFXButton buttonType="RAISED" layoutX="874.0" layoutY="498.0" onAction="#btnRegesterOnAction" prefHeight="39.0" prefWidth="135.0" style="-fx-background-color: brown;" text="Register" textFill="WHITE">
          <font>
             <Font name="Arial Bold" size="15.0" />
          </font>
       </JFXButton>
-      <Line endX="273.0" layoutX="882.0" layoutY="509.0" startX="-115.0" stroke="WHITE" />
-      <Label layoutX="792.0" layoutY="79.0" text="The Culinary Acedemy" textFill="WHITE">
+      <Line endX="304.0" layoutX="903.0" layoutY="444.0" startX="-217.5" stroke="WHITE" />
+      <Label layoutX="701.0" layoutY="48.0" text="The Culinary Acedemy" textFill="WHITE">
          <font>
-            <Font name="Comic Sans MS Bold" size="31.0" />
+            <Font name="Calibri Bold" size="45.0" />
          </font>
       </Label>
       <ImageView fitHeight="729.0" fitWidth="566.0" layoutX="-48.0" layoutY="-1.0">
          <image>
-            <Image url="@../../../../../../Downloads/chef-5128018_1920.jpg" />
+            <Image url="@../icons/chef-5128018_1920.jpg" />
          </image>
       </ImageView>
-      <ImageView fitHeight="34.0" fitWidth="34.0" layoutX="929.0" layoutY="541.0">
+      <ImageView fitHeight="29.0" fitWidth="26.0" layoutX="910.0" layoutY="560.0">
          <image>
-            <Image url="@../../../../../../Downloads/icons8-google-100.png" />
+            <Image url="@../icons/icons8-google-100.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="35.0" fitWidth="34.0" layoutX="983.0" layoutY="541.0">
+      <ImageView fitHeight="29.0" fitWidth="26.0" layoutX="949.0" layoutY="560.0">
          <image>
-            <Image url="@../../../../../../Downloads/icons8-apple-50.png" />
+            <Image url="@../icons/icons8-apple-50.png" />
          </image>
       </ImageView>
+      <TextField fx:id="txtUserName" layoutX="693.0" layoutY="329.0" prefHeight="39.0" prefWidth="231.0" style="-fx-background-color: #f8f9f9;" />
+      <Label layoutX="693.0" layoutY="302.0" text="User Name" textFill="WHITE">
+         <font>
+            <Font name="Arial" size="17.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtUserRole1" layoutX="965.0" layoutY="329.0" prefHeight="39.0" prefWidth="231.0" style="-fx-background-color: #f8f9f9;" />
+      <Label layoutX="968.0" layoutY="302.0" text="User Role" textFill="WHITE">
+         <font>
+            <Font name="Arial" size="17.0" />
+         </font>
+      </Label>
    </children>
 </AnchorPane>

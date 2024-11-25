@@ -1,2 +1,6 @@
-package lk.ijse.DAO.custom;public interface CordinatorDAO {
+package lk.ijse.DAO.custom;
+
+import lk.ijse.DAO.SuperDAO;
+
+public interface CordinatorDAO extends SuperDAO {
 }
