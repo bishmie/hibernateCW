@@ -79,11 +79,13 @@ public class StudentDAOImpl implements StudentDAO {
         Student stud=null;
        for(Student st : stlist){
         stud= new Student(st.getStudentId(),st.getFirstname(),st.getLastname(),st.getAddress(),st.getContact());
+
         }
 
-        transaction.commit();
+       transaction.commit();
        session.close();
 
         return stud;
     }
+
 }

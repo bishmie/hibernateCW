@@ -19,4 +19,6 @@ public interface UserDAo extends SuperDAO {
     ArrayList<User> getAll() throws IOException;
 
     boolean deleteCordinator(String text) throws IOException;
+
+    boolean changePassword(String hashedPassword,String userId) throws IOException;
 }

@@ -65,5 +65,12 @@ public class UserBOImpl implements UserBO {
         return userDAo.deleteCordinator(text);
     }
 
+    @Override
+    public boolean changePassword(String newPassword,String userId) throws IOException {
+        String hashedPassword = BCrypt.hashpw(newPassword, BCrypt.gensalt());
+        return userDAo.changePassword(hashedPassword,userId);
+    }
+
 
 }
+

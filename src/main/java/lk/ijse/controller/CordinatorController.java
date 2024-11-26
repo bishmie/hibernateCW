@@ -51,15 +51,22 @@ public class CordinatorController {
             {
                 deleteButton.setOnAction(event -> {
                     try {
-                        boolean isDeleted = userBO.deleteCordinator(colCoordinatorId.getText());
-                        if(isDeleted){
-                            new Alert(Alert.AlertType.INFORMATION,"Cordinator deleted Successfully").show();
-                            UserTM selectedCordinator = tblCordinator.getSelectionModel().getSelectedItem();
-                            cordinatorList.remove(selectedCordinator);
+                        String userId = null;
+                        UserTM selectedCordinator = tblCordinator.getSelectionModel().getSelectedItem();
+                        if (selectedCordinator != null) {
+                            // Get the userId value
+                            userId = selectedCordinator.getUserId();
 
-                        }
-                        else {
-                            new Alert(Alert.AlertType.ERROR,"Cordinator Does not Deleted").show();
+
+                            boolean isDeleted = userBO.deleteCordinator(userId);
+                            if (isDeleted) {
+                                new Alert(Alert.AlertType.INFORMATION, "Cordinator deleted Successfully").show();
+                                tblCordinator.getItems().remove(selectedCordinator);
+
+
+                            } else {
+                                new Alert(Alert.AlertType.ERROR, "Cordinator Does not Deleted").show();
+                            }
                         }
                     } catch (IOException e) {
                         throw new RuntimeException(e);

@@ -20,4 +20,6 @@ public interface UserBO extends SuperBO {
     ArrayList<UserDTO> loadAllCordinators() throws IOException;
 
     boolean deleteCordinator(String text) throws IOException;
+
+    boolean changePassword(String newPassword,String userId) throws IOException;
 }

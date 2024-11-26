@@ -41,17 +41,14 @@ public class LoginPageController {
     void btnLoginOnAction(ActionEvent event) {
         String password = txtPassword.getText();
 
-     String dbPassword =  getUserPassword();
+        String dbPassword =  getUserPassword();
 
         boolean isPasswordCorrect = BCrypt.checkpw(password,dbPassword);
         if (isPasswordCorrect) {
             openMainForm();
         } else {
-            System.out.println("Invalid password. Access denied.");
+            new Alert(Alert.AlertType.ERROR,"Invalid Password.Try Again").show();
         }
-
-
-
 
 
 

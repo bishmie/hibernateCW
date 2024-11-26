@@ -88,7 +88,7 @@ public class UserDAOImpl implements UserDAo {
         } finally {
             session.close();
         }
-        System.out.println(password+"awaaaaaaaaaaaaaaaaaaaaaa");
+      System.out.println(password+"awaaaaaaaaaaaaaaaaaaaaaa");
         return password;
 
     }
@@ -119,11 +119,29 @@ public class UserDAOImpl implements UserDAo {
         String hql= ("delete from User where userId = :uID");
         Query query = session.createQuery(hql);
         query.setParameter("uID",text);
+
         query.executeUpdate();
 
         transaction.commit();
         session.close();
         return true;
+    }
+
+    @Override
+    public boolean changePassword(String hashedPassword,String userId) throws IOException {
+        Session session = FactoryConfiguration.getInstance().getSession();
+        Transaction transaction = session.beginTransaction();
+
+        String hql =("update User set password= :pw where userId= :u_id");
+        Query query = session.createQuery(hql);
+        query.setParameter("u_id",userId);
+        query.setParameter("pw",hashedPassword);
+        query.executeUpdate();
+        transaction.commit();
+        session.close();
+//        System.out.println(hashedPassword+ "hellllllllllllll");
+//        System.out.println(userId+ "hiiiiiiiiiiiii");
+    return true;
     }
 
 }
