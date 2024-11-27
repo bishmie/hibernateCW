@@ -1,10 +1,7 @@
 package lk.ijse.BO;
 
 import lk.ijse.BO.custom.StudentBO;
-import lk.ijse.BO.custom.impl.CordinatorBOImpl;
-import lk.ijse.BO.custom.impl.CourseBOImpl;
-import lk.ijse.BO.custom.impl.StudentBOImpl;
-import lk.ijse.BO.custom.impl.UserBOImpl;
+import lk.ijse.BO.custom.impl.*;
 
 public class BOFactory {
 
@@ -16,7 +13,7 @@ public class BOFactory {
     }
 
     public enum BOTypes{
-       STUDENT,CORDINATOR,COURSE,USER
+       STUDENT,CORDINATOR,COURSE,USER, ENROLLMENT
     }
     //Object creation logic for BO objects
     public SuperBO getBO(BOTypes types){
@@ -29,6 +26,8 @@ public class BOFactory {
                 return new CourseBOImpl();
             case USER:
                 return new UserBOImpl();
+            case ENROLLMENT:
+                return new EnrollmentBOImpl();
 
 
 

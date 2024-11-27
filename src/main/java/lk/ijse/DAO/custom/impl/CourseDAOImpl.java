@@ -84,4 +84,18 @@ public class CourseDAOImpl implements CourseDAO {
         session.close();
         return  allCourses;
     }
+
+    @Override
+    public ArrayList<String> getAllIds() throws IOException {
+        Session session = FactoryConfiguration.getInstance().getSession();
+        Transaction transaction = session.beginTransaction();
+        String hql = ("SELECT programId FROM Course");
+
+        Query query = session.createQuery(hql);
+        ArrayList<String> list = (ArrayList<String>) query.list();
+
+        transaction.commit();
+        session.close();
+        return list;
+    }
 }

@@ -44,4 +44,9 @@ public class StudentBOImpl implements StudentBO {
         return new StudentDTO(student.getStudentId(),student.getFirstname(),student.getLastname(),student.getAddress(),student.getContact());
 
     }
+    @Override
+    public String getStudentName(String studentId) throws IOException {
+        return studentDAO.getStudentName(studentId);
+    }
+
 }

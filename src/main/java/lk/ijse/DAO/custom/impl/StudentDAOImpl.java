@@ -88,4 +88,30 @@ public class StudentDAOImpl implements StudentDAO {
         return stud;
     }
 
+    @Override
+    public String getStudentName(String studentId) throws IOException {
+
+        String studentName= null;
+        Session session = FactoryConfiguration.getInstance().getSession();
+        Transaction transaction = session.beginTransaction();
+
+        String hql= ("SELECT firstname,lastname FROM Student WHERE studentId =:stId");
+//        Query query = session.createQuery(hql);
+        Query<Object[]> query = session.createQuery(hql, Object[].class);
+        query.setParameter("stId", studentId);
+
+        // Fetch the result
+        List<Object[]> resultList = query.list();
+        if (!resultList.isEmpty()) {
+            Object[] row = resultList.get(0); // Get the first row
+            String firstName = (String) row[0];
+            String lastName = (String) row[1];
+            studentName = firstName + " " + lastName; // Concatenate the names
+
+            transaction.commit();
+            session.close();
+        }
+        return studentName;
+    }
+
 }

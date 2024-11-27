@@ -5,6 +5,9 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.util.ArrayList;
+import java.util.List;
+
 
 @NoArgsConstructor
 @AllArgsConstructor
@@ -25,5 +28,15 @@ public class Course {
 
     private double fee;
 
+
+    public Course(String programId,String programName,String duration, double fee ) {
+        this.programId = programId;
+        this.programName = programName;
+        this.duration=duration;
+        this.fee=fee;
+    }
+
+    @OneToMany(mappedBy = "course",cascade = CascadeType.ALL)
+    private List<Enrollment> enrollmentList=new ArrayList<>();
 
 }

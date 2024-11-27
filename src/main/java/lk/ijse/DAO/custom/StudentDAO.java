@@ -16,4 +16,7 @@ public interface StudentDAO extends SuperDAO {
     boolean delete(String studentId) throws IOException;
 
     Student search(String id) throws IOException;
+
+    String getStudentName(String studentId) throws IOException;
+
 }

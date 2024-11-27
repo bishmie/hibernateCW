@@ -16,4 +16,6 @@ public interface StudentBO extends SuperBO {
     boolean deleteStudent(String studentId) throws IOException;
 
     StudentDTO searchById(String id) throws IOException;
+
+    String getStudentName(String studentId) throws IOException;
 }

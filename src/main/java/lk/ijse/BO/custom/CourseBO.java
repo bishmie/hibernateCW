@@ -18,4 +18,6 @@ public interface CourseBO extends SuperBO {
     boolean updateCourse(CourseDTO courseDTO) throws IOException;
 
     ArrayList<CourseDTO> getAllCourses() throws IOException;
+
+    ArrayList<String> getCourseIds() throws IOException;
 }

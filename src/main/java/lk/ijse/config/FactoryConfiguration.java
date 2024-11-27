@@ -1,10 +1,7 @@
 package lk.ijse.config;
 
 
-import lk.ijse.entity.Cordinator;
-import lk.ijse.entity.Course;
-import lk.ijse.entity.Student;
-import lk.ijse.entity.User;
+import lk.ijse.entity.*;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
@@ -31,6 +28,7 @@ public class FactoryConfiguration {
             configuration.addAnnotatedClass(User.class);
             configuration.addAnnotatedClass(Course.class);
             configuration.addAnnotatedClass(Cordinator.class);
+            configuration.addAnnotatedClass(Enrollment.class);
 //            configuration.addAnnotatedClass(User.class);
 //            configuration.addAnnotatedClass(Course.class);
 //            configuration.addAnnotatedClass(Registration.class);

@@ -44,4 +44,15 @@ public class CourseBOImpl implements CourseBO {
         return allCourses;
 
     }
+
+    @Override
+    public ArrayList<String> getCourseIds() throws IOException {
+        ArrayList<String> allIds = new ArrayList<>();
+        ArrayList<String>all = courseDAO.getAllIds();
+        for(String p: all){
+            allIds.add(p);
+
+        }
+        return allIds;
+    }
 }

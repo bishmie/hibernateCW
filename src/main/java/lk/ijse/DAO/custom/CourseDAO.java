@@ -16,4 +16,6 @@ public interface CourseDAO extends SuperDAO {
     boolean update(Course course) throws IOException;
 
     ArrayList<Course> getAll() throws IOException;
+
+    ArrayList<String> getAllIds() throws IOException;
 }
