@@ -50,13 +50,14 @@
         <TextField fx:id="txtDownpayment" layoutX="143.0" layoutY="608.0" onAction="#txtPaymentCalOnAction" prefHeight="43.0" prefWidth="247.0" />
         <TableView fx:id="tblRegistration" layoutX="28.0" layoutY="306.0" prefHeight="215.0" prefWidth="808.0">
             <columns>
-                <TableColumn fx:id="colRegId" prefWidth="107.0" text="Regestration Id" />
-                <TableColumn fx:id="colStudentId" prefWidth="105.0" text="Student Id" />
-                <TableColumn fx:id="colStudentName" prefWidth="125.00001525878906" text="Student Name" />
-                <TableColumn fx:id="colCourseIds" prefWidth="126.0" text="Course Id" />
-            <TableColumn fx:id="colCourseName" prefWidth="113.0" text="Course Name" />
-            <TableColumn fx:id="colFee" prefWidth="123.0" text="Course Fee" />
-            <TableColumn fx:id="colAction" prefWidth="107.0" text="Action" />
+                <TableColumn fx:id="colRegId" prefWidth="97.0" text="Regestration Id" />
+                <TableColumn fx:id="colStudentId" prefWidth="96.0" text="Student Id" />
+                <TableColumn fx:id="colStudentName" prefWidth="116.00001525878906" text="Student Name" />
+                <TableColumn fx:id="colCourseIds" prefWidth="95.0" text="Course Id" />
+            <TableColumn fx:id="colCourseName" prefWidth="141.0" text="Course Name" />
+            <TableColumn fx:id="colFee" prefWidth="92.0" text="Course Fee" />
+            <TableColumn fx:id="colRegDate" prefWidth="85.0" text="REG Date" />
+            <TableColumn fx:id="colAction" prefWidth="85.0" text="Action" />
             </columns>
         </TableView>
         <JFXButton buttonType="RAISED" layoutX="845.0" layoutY="306.0" onAction="#btnAddToTableOnAction" prefHeight="35.0" prefWidth="103.0" style="-fx-background-color: GREEN;" text="   ADD" textFill="#f8f8f5">

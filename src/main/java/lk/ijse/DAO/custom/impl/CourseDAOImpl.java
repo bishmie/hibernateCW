@@ -98,4 +98,19 @@ public class CourseDAOImpl implements CourseDAO {
         session.close();
         return list;
     }
+
+    @Override
+    public Course findById(String courseId) {
+        Course course = null;
+
+        try (Session session = FactoryConfiguration.getInstance().getSession()) {
+            // Fetch the Student entity using the primary key
+            course = session.get(Course.class, courseId);
+        } catch (Exception e) {
+            e.printStackTrace();
+            throw new RuntimeException("Failed to fetch the student by ID: " + courseId);
+        }
+
+        return course;
+    }
 }

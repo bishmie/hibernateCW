@@ -17,15 +17,13 @@ public class Enrollment {
     private double downPayment;
     private double balance;
 
-    @ManyToOne
+    @ManyToOne(cascade = CascadeType.MERGE)
     @JoinColumn(name = "studentId")
     private Student student;
 
-    @ManyToOne
+    @ManyToOne(cascade = CascadeType.MERGE)
     @JoinColumn(name = "programId")
     private Course course;
-
-
 
 
 

@@ -19,4 +19,5 @@ public interface StudentDAO extends SuperDAO {
 
     String getStudentName(String studentId) throws IOException;
 
+    Student findById(String studentId);
 }

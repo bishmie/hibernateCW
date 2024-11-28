@@ -2,6 +2,7 @@ package lk.ijse.DAO.custom.impl;
 
 import lk.ijse.DAO.custom.EnrollmentDAO;
 import lk.ijse.config.FactoryConfiguration;
+import lk.ijse.entity.Enrollment;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 import org.hibernate.query.Query;
@@ -36,6 +37,16 @@ public class EnrollmentDAOImpl implements EnrollmentDAO {
             return lastRegisterId; // Return the last ID or null if no rows found
         }
 
+    @Override
+    public boolean register(Enrollment enrollment) throws IOException {
+        Session session = FactoryConfiguration.getInstance().getSession();
+        Transaction transaction = session.beginTransaction();
+
+        session.save(enrollment);
+        transaction.commit();
+        session.close();
+        return true;
+    }
 
 
     @Override

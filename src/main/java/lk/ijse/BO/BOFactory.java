@@ -13,7 +13,7 @@ public class BOFactory {
     }
 
     public enum BOTypes{
-       STUDENT,CORDINATOR,COURSE,USER, ENROLLMENT
+       STUDENT,CORDINATOR,COURSE,USER, ENROLLMENT,PAYMENT
     }
     //Object creation logic for BO objects
     public SuperBO getBO(BOTypes types){
@@ -28,6 +28,8 @@ public class BOFactory {
                 return new UserBOImpl();
             case ENROLLMENT:
                 return new EnrollmentBOImpl();
+            case PAYMENT:
+                return new PaymentBOImpl();
 
 
 

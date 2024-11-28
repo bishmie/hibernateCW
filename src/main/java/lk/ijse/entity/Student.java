@@ -25,6 +25,7 @@ public class Student {
     private String address;
     private String contact;
 
+
     public Student(String studentId,String firstname,String lastname, String address, String contact) {
         this.studentId=studentId;
         this.firstname = firstname;
@@ -33,8 +34,9 @@ public class Student {
         this.contact=contact;
     }
 
-    @OneToMany(mappedBy = "student",cascade = CascadeType.ALL)
-    private List<Enrollment> enrollmentList=new ArrayList<>();
 
+
+    @OneToMany(mappedBy = "student", cascade = {CascadeType.MERGE, CascadeType.MERGE, CascadeType.REMOVE}, orphanRemoval = true)
+    private List<Enrollment> enrollmentList=new ArrayList<>();
 
 }

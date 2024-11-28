@@ -114,4 +114,19 @@ public class StudentDAOImpl implements StudentDAO {
         return studentName;
     }
 
+    @Override
+    public Student findById(String studentId) {
+        Student student = null;
+
+        try (Session session = FactoryConfiguration.getInstance().getSession()) {
+            // Fetch the Student entity using the primary key
+            student = session.get(Student.class, studentId);
+        } catch (Exception e) {
+            e.printStackTrace();
+            throw new RuntimeException("Failed to fetch the student by ID: " + studentId);
+        }
+
+        return student;
+    }
+
 }
