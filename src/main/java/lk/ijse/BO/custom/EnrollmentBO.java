@@ -11,4 +11,8 @@ public interface EnrollmentBO extends SuperBO {
     String generateNewRegisterId();
 
     boolean registerStudent(EnrollmentDTO enrollmentDTO) throws IOException;
+
+    EnrollmentDTO searchById(String registerId) throws IOException;
+
+//    EnrollmentDTO searchById(String registerId) throws IOException;
 }

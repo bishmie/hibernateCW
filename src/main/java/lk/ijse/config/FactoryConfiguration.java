@@ -29,6 +29,7 @@ public class FactoryConfiguration {
             configuration.addAnnotatedClass(Course.class);
             configuration.addAnnotatedClass(Cordinator.class);
             configuration.addAnnotatedClass(Enrollment.class);
+            configuration.addAnnotatedClass(Payement.class);
 //            configuration.addAnnotatedClass(User.class);
 //            configuration.addAnnotatedClass(Course.class);
 //            configuration.addAnnotatedClass(Registration.class);

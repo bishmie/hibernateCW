@@ -68,7 +68,7 @@ public class AdminDashBoardController {
         @FXML
         void btnDashboardOnAction(ActionEvent event) throws IOException {
 
-                AnchorPane rootNode = FXMLLoader.load(this.getClass().getResource("/view/adminDashBoard .fxml"));
+                AnchorPane rootNode = FXMLLoader.load(this.getClass().getResource("/view/adminDashBoard.fxml"));
 
                 Scene scene = new Scene(rootNode);
 
@@ -82,6 +82,7 @@ public class AdminDashBoardController {
         @FXML
         void btnEnrollmentOnAction(ActionEvent event) {
            navigateToEnrollmentPage();
+
 
         }
 
@@ -158,7 +159,7 @@ public class AdminDashBoardController {
         }
 
         private void navigateToPaymentForm() throws IOException {
-                FXMLLoader loader = new FXMLLoader(getClass().getResource("/view/cordinator.fxml"));
+                FXMLLoader loader = new FXMLLoader(getClass().getResource("/view/payment.fxml"));
                 Parent PerenetRootNode = null;
 
                 PerenetRootNode = loader.load();

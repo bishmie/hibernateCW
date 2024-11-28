@@ -11,4 +11,10 @@ public interface EnrollmentDAO extends SuperDAO {
     String getCurrentId();
 
     boolean register(Enrollment enrollment) throws IOException;
+
+    Enrollment search(String registerId) throws IOException;
+
+//    Enrollment getStudent(String registerId) throws IOException;
+
+//    Enrollment getCourseId(String registerId) throws IOException;
 }

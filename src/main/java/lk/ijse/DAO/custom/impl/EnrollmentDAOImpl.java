@@ -48,6 +48,58 @@ public class EnrollmentDAOImpl implements EnrollmentDAO {
         return true;
     }
 
+    @Override
+    public Enrollment search(String registerId) throws IOException {
+        Session session = FactoryConfiguration.getInstance().getSession();
+        Transaction transaction = session.beginTransaction();
+        String hql =("from Enrollment where registrationId = :s_id");
+        Query query = session.createQuery(hql);
+        query.setParameter("s_id",registerId);
+
+        List<Enrollment> paymentLis = query.list();
+
+
+        Enrollment payDetails=null;
+        for(Enrollment st : paymentLis){
+//            System.out.println(st.getDownPayment()+ "awaa");
+            payDetails= new Enrollment(st.getRegistrationId(),st.getRegistrationDate(),st.getDownPayment(),st.getBalance(),st.getStudent(),st.getCourse());
+
+        }
+
+        transaction.commit();
+        session.close();
+
+
+        return payDetails;
+    }
+
+//    @Override
+//    public Enrollment getStudent(String registerId) throws IOException {
+//        Session session = FactoryConfiguration.getInstance().getSession();
+//        Transaction transaction = session.beginTransaction();
+//        String hql =("SELECT studentId FROM Enrollment WHERE registrationId = : rId");
+//        Query query = session.createQuery(hql);
+//        query.setParameter("rId",registerId);
+//      Enrollment studentIds = (Enrollment) query.list();
+//
+//        transaction.commit();
+//        session.close();
+//        return studentIds;
+//    }
+
+//    @Override
+//    public Enrollment getCourseId(String registerId) throws IOException {
+//        Session session = FactoryConfiguration.getInstance().getSession();
+//        Transaction transaction = session.beginTransaction();
+//        String hql =("SELECT programId FROM Enrollment WHERE registrationId = : rId");
+//        Query query = session.createQuery(hql);
+//        query.setParameter("rId",registerId);
+//        Enrollment courseList  = (Enrollment) query.list();
+//        transaction.commit();
+//        session.close();
+//        return courseList;
+//    }
+
 
     @Override
         public String getNextOrderId() {

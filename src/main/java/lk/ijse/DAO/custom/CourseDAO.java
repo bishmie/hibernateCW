@@ -20,4 +20,5 @@ public interface CourseDAO extends SuperDAO {
     ArrayList<String> getAllIds() throws IOException;
 
     Course findById(String courseId);
+
 }

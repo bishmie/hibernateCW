@@ -36,7 +36,7 @@ public class Course {
         this.fee=fee;
     }
 
-    @OneToMany(mappedBy = "course", cascade = {CascadeType.PERSIST, CascadeType.MERGE, CascadeType.REMOVE}, orphanRemoval = true)
+    @OneToMany(mappedBy = "course", cascade = {CascadeType.PERSIST, CascadeType.MERGE, CascadeType.REMOVE})
     private List<Enrollment> enrollmentList=new ArrayList<>();
 
 }

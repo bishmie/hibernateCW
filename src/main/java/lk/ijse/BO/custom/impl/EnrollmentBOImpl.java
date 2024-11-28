@@ -6,11 +6,13 @@ import lk.ijse.DAO.custom.CourseDAO;
 import lk.ijse.DAO.custom.EnrollmentDAO;
 import lk.ijse.DAO.custom.StudentDAO;
 import lk.ijse.dto.EnrollmentDTO;
+import lk.ijse.dto.StudentDTO;
 import lk.ijse.entity.Course;
 import lk.ijse.entity.Enrollment;
 import lk.ijse.entity.Student;
 
 import java.io.IOException;
+import java.util.ArrayList;
 
 public class EnrollmentBOImpl implements EnrollmentBO {
 
@@ -35,10 +37,30 @@ public class EnrollmentBOImpl implements EnrollmentBO {
     @Override
     public boolean registerStudent(EnrollmentDTO enrollmentDTO) throws IOException {
         Student student = studentDAO.findById(enrollmentDTO.getStudentId());
+//        System.out.println(student + "stuuuuu123");
         Course course = courseDAO.findById(enrollmentDTO.getCourseId());
 
         return enrollmentDAO.register(new Enrollment(enrollmentDTO.getRegistrationId(),enrollmentDTO.getRegistrationDate(),enrollmentDTO.getDownPayment(),enrollmentDTO.getBalance(),student,course));
     }
+
+    @Override
+    public EnrollmentDTO searchById(String registerId) throws IOException {
+        Enrollment enrollment=   enrollmentDAO.search(registerId);
+        return new EnrollmentDTO(enrollment.getRegistrationId(),enrollment.getDownPayment(),enrollment.getBalance());
+
+    }
+
+//    @Override
+//    public EnrollmentDTO searchById(String registerId) throws IOException {
+//        Enrollment studentId = enrollmentDAO.getStudent(registerId);
+//        Enrollment  courseId = enrollmentDAO.getCourseId(registerId);
+////        System.out.println(courseId.getDownPayment());
+////        System.out.println(student+"stuuuuuuuuuu");
+//        Enrollment enrollment=   enrollmentDAO.search(registerId);
+////        System.out.println("bo awooooo"+ enrollment.getDownPayment());
+//        return new EnrollmentDTO(enrollment.getRegistrationId(),enrollment.getRegistrationDate(),enrollment.getDownPayment(),enrollment.getBalance(),studentId.getStudent(),courseId.getCourse());
+//
+//    }
 
 
 }
