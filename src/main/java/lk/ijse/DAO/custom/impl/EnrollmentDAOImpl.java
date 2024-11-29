@@ -8,6 +8,7 @@ import org.hibernate.Transaction;
 import org.hibernate.query.Query;
 
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.List;
 
 public class EnrollmentDAOImpl implements EnrollmentDAO {
@@ -138,7 +139,35 @@ public class EnrollmentDAOImpl implements EnrollmentDAO {
             // Format the new ID with leading zeros
             return String.format("REG-%03d", numericPart);
         }
+
+    @Override
+    public ArrayList<Enrollment> getAll() throws IOException {
+        Session session = FactoryConfiguration.getInstance().getSession();
+        Transaction transaction = session.beginTransaction();
+
+        ArrayList<Enrollment> list = (ArrayList<Enrollment>) session.createQuery("from Enrollment ", Enrollment.class).list();
+
+        transaction.commit();
+        session.close();
+
+        return list;
     }
+
+    @Override
+    public List<Enrollment> getaAll() throws IOException {
+        Session session = FactoryConfiguration.getInstance().getSession();
+        Transaction transaction = session.beginTransaction();
+
+        List<Enrollment> list = session.createQuery("from Enrollment ", Enrollment.class).list();
+
+        transaction.commit();
+        session.close();
+
+        return list;
+    }
+}
+
+
 
 
 

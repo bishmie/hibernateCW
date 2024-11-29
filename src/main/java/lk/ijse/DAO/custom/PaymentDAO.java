@@ -10,7 +10,7 @@ import java.util.ArrayList;
 public interface PaymentDAO extends SuperDAO {
     boolean remove(String registrationId) throws IOException;
 
-    ArrayList<Enrollment> getAll() throws IOException;
+//    ArrayList<Enrollment> getAll() throws IOException;
 
 //    boolean save(PaymentDTO paymentDTO) throws IOException;
 }

@@ -29,20 +29,21 @@ public class PaymentDAOImpl implements PaymentDAO {
         return true;
     }
 
-    @Override
-    public ArrayList<Enrollment> getAll() throws IOException {
-        Session session = FactoryConfiguration.getInstance().getSession();
-        Transaction transaction = session.beginTransaction();
-
-//        List<Student> list = session.createQuery("from Student ", Student.class).list();
-
-        String hql=("from Enrollment");
-        Query query = session.createQuery(hql);
-        ArrayList<Enrollment> payList = (ArrayList<Enrollment>) query.list();
-        transaction.commit();
-        session.close();
-        return payList;
-    }
+//    @Override
+//    public ArrayList<Enrollment> getAll() throws IOException {
+//        Session session = FactoryConfiguration.getInstance().getSession();
+//        Transaction transaction = session.beginTransaction();
+//
+////        List<Student> list = session.createQuery("from Student ", Student.class).list();
+//
+//        String hql=("from Enrollment");
+//        Query query = session.createQuery(hql);
+//        ArrayList<Enrollment> payList = (ArrayList<Enrollment>) query.list();
+////        System.out.println(payList + "awpppp");
+//        transaction.commit();
+//        session.close();
+//        return payList;
+//    }
 //    @Override
 //    public boolean save(Payement payement) throws IOException {
 //        Session session = FactoryConfiguration.getInstance().getSession();

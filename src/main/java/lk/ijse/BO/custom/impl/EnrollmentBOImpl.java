@@ -6,6 +6,7 @@ import lk.ijse.DAO.custom.CourseDAO;
 import lk.ijse.DAO.custom.EnrollmentDAO;
 import lk.ijse.DAO.custom.StudentDAO;
 import lk.ijse.dto.EnrollmentDTO;
+import lk.ijse.dto.PaymentDTO;
 import lk.ijse.dto.StudentDTO;
 import lk.ijse.entity.Course;
 import lk.ijse.entity.Enrollment;
@@ -13,6 +14,7 @@ import lk.ijse.entity.Student;
 
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.List;
 
 public class EnrollmentBOImpl implements EnrollmentBO {
 
@@ -66,6 +68,22 @@ public class EnrollmentBOImpl implements EnrollmentBO {
 //        return new EnrollmentDTO(enrollment.getRegistrationId(),enrollment.getRegistrationDate(),enrollment.getDownPayment(),enrollment.getBalance(),studentId.getStudent(),courseId.getCourse());
 //
 //    }
+
+    @Override
+    public ArrayList<PaymentDTO> loadAllPayment() throws IOException {
+        ArrayList<PaymentDTO> allpayment = new ArrayList<>();
+        ArrayList<Enrollment> all = enrollmentDAO.getAll();
+        for(Enrollment s: all){
+            allpayment.add(new PaymentDTO(s.getRegistrationId(),s.getDownPayment(),s.getBalance(),s.getFinalInstallment(),s.getFinalPaidDate()));
+        }
+        return allpayment;
+    }
+
+    @Override
+    public List<Enrollment> getAll() throws IOException {
+        List<Enrollment> alldetails = enrollmentDAO.getaAll();
+        return alldetails;
+    }
 
 
 }

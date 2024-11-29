@@ -25,6 +25,8 @@ import java.sql.SQLException;
 public class LoginPageController {
 
     UserBO userBO =  (UserBO) BOFactory.getBoFactory().getBO(BOFactory.BOTypes.USER);
+    @FXML
+    private  TextField txtRole;
 
     @FXML
     private AnchorPane rootNode;
@@ -40,12 +42,20 @@ public class LoginPageController {
     @FXML
     void btnLoginOnAction(ActionEvent event) {
         String password = txtPassword.getText();
+        String userId= txtUserId.getText();
+        String role= txtRole.getText();
 
         String dbPassword =  getUserPassword();
 
         boolean isPasswordCorrect = BCrypt.checkpw(password,dbPassword);
         if (isPasswordCorrect) {
-            openMainForm();
+
+            if (role.equals("cordinator")) {
+                openCordinatorForm();
+            } else {
+                openMainForm();
+            }
+
         } else {
             new Alert(Alert.AlertType.ERROR,"Invalid Password.Try Again").show();
         }
@@ -55,6 +65,20 @@ public class LoginPageController {
 
 
         }
+
+    private void openCordinatorForm() {
+
+        try {
+            Scene scene = new Scene(FXMLLoader.load(this.getClass().getResource("/view/cordinatorDashboard.fxml")));
+            Stage stage = (Stage) rootNode.getScene().getWindow();
+            stage.setScene(scene);
+            stage.centerOnScreen();
+            stage.setResizable(false);
+            stage.show();
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+    }
 
 
     private void openMainForm(){
@@ -88,9 +112,21 @@ public class LoginPageController {
 
 
     @FXML
-    void btnRegesterOnAction(ActionEvent event) {
+    void btnRegesterOnAction(ActionEvent event) throws IOException {
+        AnchorPane rootNode = FXMLLoader.load(this.getClass().getResource("/view/regesterForm.fxml"));
+
+        Scene scene = new Scene(rootNode);
+
+        Stage stage = (Stage) this.rootNode.getScene().getWindow();
+        stage.setScene(scene);
+        stage.centerOnScreen();
+        stage.setTitle("Login Form");
+
+
 
     }
+
+
 
     @FXML
     void txtPasswordOnKeyReleased(KeyEvent event) {

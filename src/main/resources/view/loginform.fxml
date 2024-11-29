@@ -22,24 +22,24 @@
             <Font name="Arial Bold" size="16.0" />
          </font>
       </Label>
-      <Label layoutX="189.0" layoutY="320.0" text="Password" textFill="WHITE">
+      <Label layoutX="189.0" layoutY="312.0" text="Password" textFill="WHITE">
          <font>
             <Font name="Arial Bold" size="16.0" />
          </font>
       </Label>
       <TextField fx:id="txtUserId" layoutX="189.0" layoutY="255.0" onKeyReleased="#txtUserNameOnKeyReleased" prefHeight="39.0" prefWidth="385.0" style="-fx-background-color: #f8f9f9;" />
-      <JFXButton buttonType="RAISED" layoutX="316.0" layoutY="434.0" onAction="#btnLoginOnAction" prefHeight="39.0" prefWidth="135.0" style="-fx-background-color: brown;" text="Login" textFill="WHITE">
+      <JFXButton buttonType="RAISED" layoutX="316.0" layoutY="489.0" onAction="#btnLoginOnAction" prefHeight="39.0" prefWidth="135.0" style="-fx-background-color: brown;" text="Login" textFill="WHITE">
          <font>
             <Font name="Arial Bold" size="15.0" />
          </font>
       </JFXButton>
-      <Line endX="273.0" layoutX="300.0" layoutY="509.0" startX="-115.0" stroke="WHITE" />
-      <Label layoutX="221.0" layoutY="550.0" text="Don't you have an account ?" textFill="WHITE">
+      <Line endX="273.0" layoutX="300.0" layoutY="554.0" startX="-115.0" stroke="WHITE" />
+      <Label layoutX="221.0" layoutY="596.0" text="Don't you have an account ?" textFill="WHITE">
          <font>
             <Font name="Arial Bold" size="13.0" />
          </font>
       </Label>
-      <JFXButton buttonType="RAISED" layoutX="423.0" layoutY="538.0" onAction="#btnRegesterOnAction" prefHeight="39.0" prefWidth="108.0" style="-fx-background-color: brown;" text="Register" textFill="WHITE">
+      <JFXButton buttonType="RAISED" layoutX="423.0" layoutY="585.0" onAction="#btnRegesterOnAction" prefHeight="39.0" prefWidth="108.0" style="-fx-background-color: brown;" text="Register" textFill="WHITE">
          <font>
             <Font name="Arial Bold" size="14.0" />
          </font>
@@ -55,6 +55,12 @@
          </font>
       </Label>
       <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="456.0" layoutY="26.0" pickOnBounds="true" preserveRatio="true" />
-      <PasswordField fx:id="txtPassword" layoutX="191.0" layoutY="357.0" onKeyReleased="#txtPasswordOnKeyReleased" prefHeight="39.0" prefWidth="385.0" />
+      <PasswordField fx:id="txtPassword" layoutX="191.0" layoutY="344.0" onKeyReleased="#txtPasswordOnKeyReleased" prefHeight="39.0" prefWidth="385.0" />
+      <Label layoutX="194.0" layoutY="403.0" text="User Role" textFill="WHITE">
+         <font>
+            <Font name="Arial Bold" size="16.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtRole" layoutX="192.0" layoutY="432.0" onKeyReleased="#txtUserNameOnKeyReleased" prefHeight="39.0" prefWidth="385.0" style="-fx-background-color: #f8f9f9;" />
    </children>
 </AnchorPane>

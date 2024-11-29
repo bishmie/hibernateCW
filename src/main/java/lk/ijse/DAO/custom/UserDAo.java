@@ -21,4 +21,6 @@ public interface UserDAo extends SuperDAO {
     boolean deleteCordinator(String text) throws IOException;
 
     boolean changePassword(String hashedPassword,String userId) throws IOException;
+
+    String getUserRole(String userId) throws IOException;
 }

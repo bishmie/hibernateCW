@@ -1,17 +1,11 @@
 package lk.ijse.BO.custom.impl;
 
-import lk.ijse.BO.BOFactory;
 import lk.ijse.BO.custom.UserBO;
 import lk.ijse.DAO.DAOFactory;
 import lk.ijse.DAO.custom.UserDAo;
-import lk.ijse.dto.StudentDTO;
 import lk.ijse.dto.UserDTO;
-import lk.ijse.entity.Student;
 import lk.ijse.entity.User;
-import lk.ijse.util.PasswordUtils;
 import org.mindrot.jbcrypt.BCrypt;
-
-import org.apache.commons.codec.digest.DigestUtils;
 
 
 import java.io.IOException;
@@ -69,6 +63,11 @@ public class UserBOImpl implements UserBO {
     public boolean changePassword(String newPassword,String userId) throws IOException {
         String hashedPassword = BCrypt.hashpw(newPassword, BCrypt.gensalt());
         return userDAo.changePassword(hashedPassword,userId);
+    }
+
+    @Override
+    public String getUserRole(String userId) throws IOException {
+        return userDAo.getUserRole(userId);
     }
 
 

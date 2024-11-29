@@ -22,4 +22,6 @@ public interface UserBO extends SuperBO {
     boolean deleteCordinator(String text) throws IOException;
 
     boolean changePassword(String newPassword,String userId) throws IOException;
+
+    String getUserRole(String userId) throws IOException;
 }

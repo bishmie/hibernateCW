@@ -9,6 +9,6 @@ import java.util.ArrayList;
 public interface PaymentBO extends SuperBO {
     boolean removeBalance(String registrationId) throws IOException;
 
-    ArrayList<PaymentDTO> loadAllPayment() throws IOException;
+//    ArrayList<PaymentDTO> loadAllPayment() throws IOException;
 //    boolean save(PaymentDTO paymentDTO) throws IOException;
 }

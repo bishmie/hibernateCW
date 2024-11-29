@@ -144,6 +144,21 @@ public class UserDAOImpl implements UserDAo {
     return true;
     }
 
+    @Override
+    public String getUserRole(String userId) throws IOException {
+        Session session = FactoryConfiguration.getInstance().getSession();
+        Transaction transaction = session.beginTransaction();
+
+        String hql =("SELECT userRole FROM User WHERE userId= :uid");
+        Query query = session.createQuery(hql);
+        query.setParameter("uid",userId);
+        String userrole = query.list().toString();
+
+        transaction.commit();
+        session.close();
+        return userrole;
+    }
+
 }
 
 

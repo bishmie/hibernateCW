@@ -1,11 +1,14 @@
 package lk.ijse.controller;
 
 import javafx.event.ActionEvent;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Scene;
 import javafx.scene.layout.AnchorPane;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.Alert;
 import javafx.scene.control.TextField;
+import javafx.stage.Stage;
 import lk.ijse.BO.BOFactory;
 import lk.ijse.BO.custom.UserBO;
 import lk.ijse.BO.custom.impl.UserBOImpl;
@@ -44,6 +47,7 @@ public class RegesterFormController {
             if(isRegistered){
                 new Alert(Alert.AlertType.INFORMATION,"REGISTERED SUCCESSFULLY").show();
                 clearFeilds();
+                loginPage();
             }
             else {
                 new Alert(Alert.AlertType.ERROR,"PLEASE TRY AGAIN").show();
@@ -58,6 +62,22 @@ public class RegesterFormController {
         txtPassword.setText("");
         txtUserName.setText("");
         txtUserRole1.setText("");
+    }
+
+    @FXML
+    void btnLOgingonaction(ActionEvent event) {
+
+
+    }
+    private void loginPage() throws IOException {
+        AnchorPane rootNode = FXMLLoader.load(this.getClass().getResource("/view/loginForm.fxml"));
+
+        Scene scene = new Scene(rootNode);
+
+        Stage stage = (Stage) this.rootNode.getScene().getWindow();
+        stage.setScene(scene);
+        stage.centerOnScreen();
+        stage.setTitle("Login Form");
     }
 
 }

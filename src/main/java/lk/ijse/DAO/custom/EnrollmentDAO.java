@@ -4,6 +4,8 @@ import lk.ijse.DAO.SuperDAO;
 import lk.ijse.entity.Enrollment;
 
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 
 public interface EnrollmentDAO extends SuperDAO {
     String getNextOrderId() throws IOException;
@@ -15,6 +17,10 @@ public interface EnrollmentDAO extends SuperDAO {
     Enrollment search(String registerId) throws IOException;
 
     boolean update(String registrationId, double finalInstallment, String finalPayDate) throws IOException;
+
+    ArrayList<Enrollment> getAll() throws IOException;
+
+    List<Enrollment> getaAll() throws IOException;
 
 //    Enrollment getStudent(String registerId) throws IOException;
 

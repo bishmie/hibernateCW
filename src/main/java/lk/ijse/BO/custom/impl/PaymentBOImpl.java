@@ -21,14 +21,14 @@ public class PaymentBOImpl implements PaymentBO {
         return paymentDAO.remove(registrationId);
     }
 
-    @Override
-    public ArrayList<PaymentDTO> loadAllPayment() throws IOException {
-        ArrayList<PaymentDTO> allpayment = new ArrayList<>();
-        ArrayList<Enrollment> all = paymentDAO.getAll();
-        for(Enrollment s: all){
-            allpayment.add(new PaymentDTO(s.getRegistrationId(),s.getDownPayment(),s.getBalance(),s.getFinalInstallment(),s.getFinalPaidDate()));
-        }
-        return allpayment;
-    }
+//    @Override
+//    public ArrayList<PaymentDTO> loadAllPayment() throws IOException {
+//        ArrayList<PaymentDTO> allpayment = new ArrayList<>();
+//        ArrayList<Enrollment> all = paymentDAO.getAll();
+//        for(Enrollment s: all){
+//            allpayment.add(new PaymentDTO(s.getRegistrationId(),s.getDownPayment(),s.getBalance(),s.getFinalInstallment(),s.getFinalPaidDate()));
+//        }
+//        return allpayment;
+//    }
 }
 
