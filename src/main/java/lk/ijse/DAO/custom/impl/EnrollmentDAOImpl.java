@@ -62,7 +62,7 @@ public class EnrollmentDAOImpl implements EnrollmentDAO {
         Enrollment payDetails=null;
         for(Enrollment st : paymentLis){
 //            System.out.println(st.getDownPayment()+ "awaa");
-            payDetails= new Enrollment(st.getRegistrationId(),st.getRegistrationDate(),st.getDownPayment(),st.getBalance(),st.getStudent(),st.getCourse());
+            payDetails= new Enrollment(st.getRegistrationId(),st.getRegistrationDate(),st.getDownPayment(),st.getBalance(),st.getFinalInstallment(),st.getFinalPaidDate());
 
         }
 
@@ -71,6 +71,25 @@ public class EnrollmentDAOImpl implements EnrollmentDAO {
 
 
         return payDetails;
+    }
+
+    @Override
+    public boolean update(String registrationId, double finalInstallment, String finalPayDate) throws IOException {
+        Session session = FactoryConfiguration.getInstance().getSession();
+        Transaction transaction = session.beginTransaction();
+        System.out.println(registrationId+"awooooo");
+        String hql="UPDATE Enrollment SET finalInstallment = :fIns, finalPaidDate = :fDate WHERE registrationId= :rId";
+        Query query = session.createQuery(hql);
+        query.setParameter("rId",registrationId);
+        query.setParameter("fIns",finalInstallment);
+        query.setParameter("fDate",finalPayDate);
+
+        query.executeUpdate();
+        transaction.commit();
+        session.close();
+
+        return true;
+
     }
 
 //    @Override

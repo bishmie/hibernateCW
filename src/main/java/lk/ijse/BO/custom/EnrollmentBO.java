@@ -14,5 +14,7 @@ public interface EnrollmentBO extends SuperBO {
 
     EnrollmentDTO searchById(String registerId) throws IOException;
 
+    boolean updateEnrollment(String registrationId, double finalInstallment, String finalPayDate) throws IOException;
+
 //    EnrollmentDTO searchById(String registerId) throws IOException;
 }

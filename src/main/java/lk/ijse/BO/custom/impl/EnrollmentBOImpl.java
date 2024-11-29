@@ -40,7 +40,7 @@ public class EnrollmentBOImpl implements EnrollmentBO {
 //        System.out.println(student + "stuuuuu123");
         Course course = courseDAO.findById(enrollmentDTO.getCourseId());
 
-        return enrollmentDAO.register(new Enrollment(enrollmentDTO.getRegistrationId(),enrollmentDTO.getRegistrationDate(),enrollmentDTO.getDownPayment(),enrollmentDTO.getBalance(),student,course));
+        return enrollmentDAO.register(new Enrollment(enrollmentDTO.getRegistrationId(),enrollmentDTO.getRegistrationDate(),enrollmentDTO.getDownPayment(),enrollmentDTO.getBalance(),enrollmentDTO.getFinalInstallment(),enrollmentDTO.getFinalPaidDate(),student,course));
     }
 
     @Override
@@ -48,6 +48,11 @@ public class EnrollmentBOImpl implements EnrollmentBO {
         Enrollment enrollment=   enrollmentDAO.search(registerId);
         return new EnrollmentDTO(enrollment.getRegistrationId(),enrollment.getDownPayment(),enrollment.getBalance());
 
+    }
+
+    @Override
+    public boolean updateEnrollment(String registrationId, double finalInstallment, String finalPayDate) throws IOException {
+        return enrollmentDAO.update(registrationId,finalInstallment,finalPayDate);
     }
 
 //    @Override

@@ -19,6 +19,8 @@ public class Enrollment {
     private String registrationDate;
     private double downPayment;
     private double balance;
+    private double finalInstallment;
+    private String finalPaidDate;
 
     @ManyToOne(cascade = CascadeType.MERGE)
     @JoinColumn(name = "studentId")
@@ -28,15 +30,22 @@ public class Enrollment {
     @JoinColumn(name = "programId")
     private Course course;
 
-    @OneToMany(mappedBy = "enrollment", cascade = CascadeType.ALL)
-    private List<Payement> paymentList = new ArrayList<>();
-
-    public Enrollment(String registrationId, String registrationDate, double downPayment, double balance, Student student, Course course) {
-          this.registrationId =registrationId;
-          this.registrationDate =registrationDate;
-          this.downPayment =downPayment;
-          this.balance=balance;
-          this.student=student;
-          this.course=course;
+    public Enrollment(String registrationId, String registrationDate, double downPayment, double balance, double finalInstallment, String finalPaidDate) {
+       this.registrationId=registrationId;
+       this.registrationDate=registrationDate;
+       this.downPayment=downPayment;
+       this.balance=balance;
+       this.finalInstallment=finalInstallment;
+       this.finalPaidDate=finalPaidDate;
     }
+
+
+//    public Enrollment(String registrationId, String registrationDate, double downPayment, double balance, Student student, Course course) {
+//          this.registrationId =registrationId;
+//          this.registrationDate =registrationDate;
+//          this.downPayment =downPayment;
+//          this.balance=balance;
+//          this.student=student;
+//          this.course=course;
+//    }
 }

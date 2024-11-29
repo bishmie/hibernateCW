@@ -283,10 +283,13 @@ public class EnrollmentController {
         String registerDate= String.valueOf(dateRegister.getValue());
         double downPayment = Double.parseDouble(txtDownpayment.getText());
         double balance= Double.parseDouble(lblBalance.getText());
+        double finalInstallment = 0.0;
+        String finalPaidDate= "Pending";
         String studentId = txtStudentId.getText();
         String courseId=cmbCourses.getValue();
+
         try {
-            boolean isRegistered = enrollmentBO.registerStudent(new EnrollmentDTO(registerId,registerDate,downPayment,balance,studentId,courseId));
+            boolean isRegistered = enrollmentBO.registerStudent(new EnrollmentDTO(registerId,registerDate,downPayment,balance,finalInstallment,finalPaidDate,studentId,courseId));
             if(isRegistered){
                 new Alert(Alert.AlertType.CONFIRMATION,"Successfully Registered").show();
                 clearFeilds();

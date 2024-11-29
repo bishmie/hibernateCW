@@ -15,15 +15,18 @@ public class EnrollmentDTO {
     private String registrationDate;
     private double downPayment;
     private double balance;
+    private double finalInstallment;
+    private String finalPaidDate;
     private String studentId;
     private String courseId;
 
-    public EnrollmentDTO(String registrationId, String registrationDate, double downPayment, double balance, Student student, Course course) {
-    }
 
-    public EnrollmentDTO(String registrationId, double downPayment, double balance) {
+
+    public EnrollmentDTO(String registrationId,double downPayment, double balance) {
+
         this.registrationId =registrationId;
         this.downPayment = downPayment;
         this.balance = balance;
+
     }
 }
