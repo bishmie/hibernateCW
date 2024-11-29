@@ -62,14 +62,6 @@
       </AnchorPane>
       <AnchorPane layoutX="34.0" layoutY="127.0" prefHeight="477.0" prefWidth="385.0" style="-fx-border-color: black;">
          <children>
-            <JFXButton buttonType="RAISED" layoutX="244.0" layoutY="337.0" onAction="#btnDeleteOnAction" prefHeight="35.0" prefWidth="103.0" style="-fx-background-color: RED;" text="    DELETE" textFill="#f8f8f6">
-               <font>
-                  <Font name="Arial Bold" size="10.0" />
-               </font>
-               <cursor>
-                  <Cursor fx:constant="HAND" />
-               </cursor>
-            </JFXButton>
             <Label layoutX="22.0" layoutY="97.0" text="User Id" textFill="#17202a">
                <font>
                   <Font name="Arial" size="14.0" />
@@ -93,7 +85,7 @@
                   <Font name="Arial" size="16.0" />
                </font>
             </Label>
-            <JFXButton buttonType="RAISED" layoutX="138.0" layoutY="337.0" onAction="#btnUpdateOnAction" prefHeight="35.0" prefWidth="103.0" style="-fx-background-color: brown;" text="    UPDATE" textFill="#f8f8f6">
+            <JFXButton buttonType="RAISED" layoutX="221.0" layoutY="338.0" onAction="#btnUpdateOnAction" prefHeight="35.0" prefWidth="103.0" style="-fx-background-color: brown;" text="VIEW" textFill="#f8f8f6">
                <font>
                   <Font name="Arial Bold" size="10.0" />
                </font>
@@ -101,16 +93,6 @@
                   <Cursor fx:constant="HAND" />
                </cursor>
             </JFXButton>
-            <ImageView fitHeight="43.0" fitWidth="16.0" layoutX="151.0" layoutY="347.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../icons/icons8-update-24.png" />
-               </image>
-            </ImageView>
-            <ImageView fitHeight="16.0" fitWidth="16.0" layoutX="256.0" layoutY="347.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../icons/icons8-delete-30.png" />
-               </image>
-            </ImageView>
          </children>
       </AnchorPane>
    </children>

@@ -13,7 +13,7 @@ public class LauncherWrapper extends Application {
 
     @Override
     public void start(Stage stage) throws Exception {
-        Parent root = FXMLLoader.load(getClass().getResource("/view/adminDashBoard.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("/view/loginForm.fxml"));
         Scene scene = new Scene(root);
         stage.setScene(scene);
         stage.centerOnScreen();

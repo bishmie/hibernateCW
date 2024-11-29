@@ -51,11 +51,6 @@ public class UserSettingsController {
 
     @FXML
     void btnUpdateOnAction(ActionEvent event) {
-
-    }
-
-    @FXML
-    void txtSearchOnAction(ActionEvent event) {
         String id = txtUserId.getText();
 //        System.out.println("Searching for user with ID: " + id);
 
@@ -78,6 +73,12 @@ public class UserSettingsController {
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
+
+    }
+
+    @FXML
+    void txtSearchOnAction(ActionEvent event) {
+    
 
     }
 

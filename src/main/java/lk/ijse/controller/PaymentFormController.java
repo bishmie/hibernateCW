@@ -149,7 +149,7 @@ public class PaymentFormController {
                 boolean isUpdate = enrollmentBO.updateEnrollment(registrationId, finalInstallment, finalPayDate);
                 if (isUpdate) {
                     reduceBalance();
-                    loadAllPayment();
+                    //loadAllPayment();
                     new Alert(Alert.AlertType.CONFIRMATION, "Payment updated successfully").show();
                 } else {
                     new Alert(Alert.AlertType.ERROR, "Payment declined").show();

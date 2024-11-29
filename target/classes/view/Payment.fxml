@@ -86,13 +86,5 @@
          </font>
       </Label>
       <DatePicker fx:id="dateFinalDate" layoutX="732.0" layoutY="106.0" prefHeight="43.0" prefWidth="337.0" />
-      <JFXButton buttonType="RAISED" layoutX="849.0" layoutY="338.0" onAction="#btnclearOnAction" prefHeight="35.0" prefWidth="103.0" style="-fx-background-color: GREEN;" text="CLEAR" textFill="#f8f8f5">
-         <font>
-            <Font name="Arial Bold" size="10.0" />
-         </font>
-         <cursor>
-            <Cursor fx:constant="HAND" />
-         </cursor>
-      </JFXButton>
    </children>
 </AnchorPane>

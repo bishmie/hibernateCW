@@ -5,49 +5,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="55fb35b2-c84a-4c54-94c9-796bd08fae46" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/controller/CordinatorDashboardController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/view/cordinatorDashboard.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/exception/ExceptionHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/exception/InvalidCredentialsException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/exception/UserAlreadyExistsException.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/BO/custom/EnrollmentBO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/BO/custom/EnrollmentBO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/BO/custom/PaymentBO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/BO/custom/PaymentBO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/BO/custom/UserBO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/BO/custom/UserBO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/BO/custom/impl/EnrollmentBOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/BO/custom/impl/EnrollmentBOImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/BO/custom/impl/PaymentBOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/BO/custom/impl/PaymentBOImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/BO/custom/impl/UserBOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/BO/custom/impl/UserBOImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/DAO/custom/EnrollmentDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/DAO/custom/EnrollmentDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/DAO/custom/PaymentDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/DAO/custom/PaymentDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/DAO/custom/UserDAo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/DAO/custom/UserDAo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/DAO/custom/impl/EnrollmentDAOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/DAO/custom/impl/EnrollmentDAOImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/DAO/custom/impl/PaymentDAOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/DAO/custom/impl/PaymentDAOImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/DAO/custom/impl/UserDAOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/DAO/custom/impl/UserDAOImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/LauncherWrapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/LauncherWrapper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/controller/LoginPageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/controller/LoginPageController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/controller/PaymentFormController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/controller/PaymentFormController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/controller/RegesterFormController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/controller/RegesterFormController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/entity/Student.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/entity/Student.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/tm/PaymentTM.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/tm/PaymentTM.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/controller/UserSettingsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/controller/UserSettingsController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/view/Payment.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/view/Payment.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/view/loginform.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/view/loginform.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/view/regesterForm.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/view/regesterForm.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/lk/ijse/BO/custom/EnrollmentBO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/lk/ijse/BO/custom/EnrollmentBO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/lk/ijse/BO/custom/PaymentBO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/lk/ijse/BO/custom/PaymentBO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/lk/ijse/BO/custom/UserBO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/lk/ijse/BO/custom/UserBO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/lk/ijse/BO/custom/impl/EnrollmentBOImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/lk/ijse/BO/custom/impl/EnrollmentBOImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/lk/ijse/BO/custom/impl/PaymentBOImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/lk/ijse/BO/custom/impl/PaymentBOImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/lk/ijse/BO/custom/impl/UserBOImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/lk/ijse/BO/custom/impl/UserBOImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/lk/ijse/DAO/custom/EnrollmentDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/lk/ijse/DAO/custom/EnrollmentDAO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/lk/ijse/DAO/custom/PaymentDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/lk/ijse/DAO/custom/PaymentDAO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/lk/ijse/DAO/custom/UserDAo.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/lk/ijse/DAO/custom/UserDAo.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/lk/ijse/DAO/custom/impl/EnrollmentDAOImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/lk/ijse/DAO/custom/impl/EnrollmentDAOImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/lk/ijse/DAO/custom/impl/PaymentDAOImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/lk/ijse/DAO/custom/impl/PaymentDAOImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/lk/ijse/DAO/custom/impl/UserDAOImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/lk/ijse/DAO/custom/impl/UserDAOImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/view/settings.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/view/settings.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/lk/ijse/LauncherWrapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/lk/ijse/LauncherWrapper.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/lk/ijse/controller/LoginPageController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/lk/ijse/controller/LoginPageController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/lk/ijse/controller/PaymentFormController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/lk/ijse/controller/PaymentFormController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/lk/ijse/controller/RegesterFormController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/lk/ijse/controller/RegesterFormController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/lk/ijse/entity/Student.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/lk/ijse/entity/Student.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/lk/ijse/tm/PaymentTM.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/lk/ijse/tm/PaymentTM.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/view/Payment.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/view/Payment.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/view/loginform.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/view/loginform.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/view/regesterForm.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/view/regesterForm.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/lk/ijse/controller/UserSettingsController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/lk/ijse/controller/UserSettingsController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/view/settings.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/view/settings.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -101,6 +73,7 @@
       <recent name="C:\Users\Bishmi\IdeaProjects\hibernateCW\src\main\resources\view" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="lk.ijse.exception" />
       <recent name="lk.ijse.util" />
       <recent name="util" />
     </key>
@@ -111,7 +84,7 @@
       <module name="hibernateCW" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="lk.ijse.*" />
+          <option name="PATTERN" value="lk.ijse.exceptionHandler" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -124,7 +97,7 @@
       <module name="hibernateCW" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="lk.ijse.*" />
+          <option name="PATTERN" value="lk.ijse.exceptionHandler" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -137,7 +110,7 @@
       <module name="hibernateCW" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="lk.ijse.*" />
+          <option name="PATTERN" value="lk.ijse.exceptionHandler" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>

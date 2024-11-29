@@ -13,6 +13,7 @@ import lk.ijse.BO.BOFactory;
 import lk.ijse.BO.custom.UserBO;
 import lk.ijse.BO.custom.impl.UserBOImpl;
 import lk.ijse.dto.UserDTO;
+import lk.ijse.exception.UserAlreadyExistsException;
 
 import java.io.IOException;
 
@@ -53,7 +54,7 @@ public class RegesterFormController {
                 new Alert(Alert.AlertType.ERROR,"PLEASE TRY AGAIN").show();
             }
         } catch (IOException e) {
-            throw new RuntimeException(e);
+            new Alert(Alert.AlertType.ERROR,"duplicate Id");
         }
     }
 
