@@ -103,5 +103,13 @@
             <Image url="@../icons/icons8-delete-30.png" />
          </image>
       </ImageView>
+      <JFXButton buttonType="RAISED" layoutX="966.0" layoutY="81.0" onAction="#btnViewOnAction" prefHeight="35.0" prefWidth="103.0" style="-fx-background-color: blue;" text="View Registrtaion" textFill="#f8f8f5">
+         <font>
+            <Font name="Arial Bold" size="10.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
    </children>
 </AnchorPane>

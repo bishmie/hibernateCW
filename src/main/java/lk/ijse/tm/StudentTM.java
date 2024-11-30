@@ -14,4 +14,9 @@ public class StudentTM {
     private String lastname;
     private String Address;
     private String contact;
+
+    public StudentTM(String studentId, String firstname) {
+        this.studentId=studentId;
+        this.firstname=firstname;
+    }
 }

@@ -35,7 +35,7 @@
                   <Font name="Arial Bold" size="12.0" />
                </font>
             </Label>
-            <Label fx:id="lblTotStudent" layoutX="45.0" layoutY="161.0" text="200" textFill="WHITE">
+            <Label fx:id="lblTotStudent" layoutX="45.0" layoutY="161.0" text="100" textFill="WHITE">
                <font>
                   <Font name="Arial Bold" size="41.0" />
                </font>
@@ -45,7 +45,7 @@
                   <Font name="Arial Bold" size="12.0" />
                </font>
             </Label>
-            <Label fx:id="lblTotCourses" layoutX="305.0" layoutY="161.0" text="200" textFill="WHITE">
+            <Label fx:id="lblTotCourses" layoutX="305.0" layoutY="161.0" text="3" textFill="WHITE">
                <font>
                   <Font name="Arial Bold" size="41.0" />
                </font>
@@ -55,7 +55,7 @@
                   <Font name="Arial Bold" size="12.0" />
                </font>
             </Label>
-            <Label fx:id="lblTotEmployees" layoutX="565.0" layoutY="161.0" text="200" textFill="WHITE">
+            <Label fx:id="lblTotEmployees" layoutX="565.0" layoutY="161.0" text="5" textFill="WHITE">
                <font>
                   <Font name="Arial Bold" size="41.0" />
                </font>
@@ -65,7 +65,7 @@
                   <Font name="Arial Bold" size="12.0" />
                </font>
             </Label>
-            <Label fx:id="lblTotRevenue" layoutX="827.0" layoutY="161.0" text="200" textFill="WHITE">
+            <Label fx:id="lblTotRevenue" layoutX="827.0" layoutY="161.0" text="1200000" textFill="WHITE">
                <font>
                   <Font name="Arial Bold" size="41.0" />
                </font>

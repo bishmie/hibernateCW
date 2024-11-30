@@ -5,6 +5,7 @@ import lk.ijse.entity.Student;
 
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.List;
 
 public interface StudentDAO extends SuperDAO {
     boolean save(Student student) throws IOException;
@@ -20,4 +21,6 @@ public interface StudentDAO extends SuperDAO {
     String getStudentName(String studentId) throws IOException;
 
     Student findById(String studentId);
+
+    List<Student> getStudent() throws IOException;
 }

@@ -5,6 +5,7 @@ import lk.ijse.dto.StudentDTO;
 
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.List;
 
 public interface StudentBO extends SuperBO {
     boolean saveStudent(StudentDTO studentDTO) throws IOException;
@@ -18,4 +19,6 @@ public interface StudentBO extends SuperBO {
     StudentDTO searchById(String id) throws IOException;
 
     String getStudentName(String studentId) throws IOException;
+
+    List<StudentDTO> getRegisteredStudents() throws IOException;
 }

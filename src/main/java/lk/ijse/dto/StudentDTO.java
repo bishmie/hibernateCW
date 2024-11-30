@@ -15,4 +15,8 @@ public class StudentDTO {
     private String Address;
     private String contact;
 
+    public StudentDTO(String studentId, String firstname) {
+        this.studentId=studentId;
+        this.firstname=firstname;
+    }
 }

@@ -129,4 +129,23 @@ public class StudentDAOImpl implements StudentDAO {
         return student;
     }
 
+    @Override
+    public List<Student> getStudent() throws IOException {
+        Session session = FactoryConfiguration.getInstance().getSession();
+        Transaction transaction = session.beginTransaction();
+
+        Query query = session.createQuery("SELECT s " +
+                "FROM Student s " +
+                "JOIN s.enrollmentList r " +
+                "JOIN r.course p " +
+                "GROUP BY s.studentId, s.firstname " +
+                "HAVING COUNT(DISTINCT p.programId) = (" +
+                "  SELECT COUNT(DISTINCT p1.programId) FROM Course p1" +
+                ")");
+        List<Student> students = query.list();
+        transaction.commit();
+        session.close();
+        return students;
+    }
+
 }

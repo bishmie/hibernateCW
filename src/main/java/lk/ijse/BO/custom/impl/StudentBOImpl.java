@@ -8,6 +8,7 @@ import lk.ijse.entity.Student;
 
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.List;
 
 public class StudentBOImpl implements StudentBO {
 
@@ -47,6 +48,18 @@ public class StudentBOImpl implements StudentBO {
     @Override
     public String getStudentName(String studentId) throws IOException {
         return studentDAO.getStudentName(studentId);
+    }
+
+    @Override
+    public List<StudentDTO> getRegisteredStudents() throws IOException {
+        List<Student> students = studentDAO.getStudent();
+        List<StudentDTO> stList = new ArrayList<>();
+
+        for (Student student : students){
+            StudentDTO studentDTO = new StudentDTO(student.getStudentId(),student.getFirstname());
+            stList.add(studentDTO);
+        }
+        return stList;
     }
 
 }

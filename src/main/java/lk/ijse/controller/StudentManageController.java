@@ -1,6 +1,7 @@
 package lk.ijse.controller;
 
 import javafx.collections.FXCollections;
+import javafx.fxml.FXMLLoader;
 import javafx.scene.input.KeyEvent;
 
 import javafx.collections.ObservableList;
@@ -266,4 +267,11 @@ public class StudentManageController {
         return true;
     }
 
-}
+    @FXML
+    void btnViewOnAction(ActionEvent event) throws IOException {
+        AnchorPane detailPane = FXMLLoader.load(getClass().getResource("/view/viewRegistration.fxml"));
+        rootNode.getChildren().clear();
+        rootNode.getChildren().add(detailPane);
+    }
+    }
+
